@@ -26,10 +26,10 @@ public class MinimumCost {
 	public MinimumCost(){}
 	
 	public String Calculate(int values[][],int dest[],int prod[]){
-		this.matrix_data=values;
+		this.matrix_data=values.clone();
 		asignments=new int[values.length][values[0].length];
-		this.destinations=dest;
-		this.production=prod;
+		this.destinations=dest.clone();
+		this.production=prod.clone();
 		PerformCalculus();
 		return ArrageString();
 	}

@@ -6,7 +6,9 @@ public class Main {
 	
 	public static void main(String args[]){
 			
-		NorthWest MC=new NorthWest();
+		MinimumCost MC=new MinimumCost();
+		NorthWest NW=new NorthWest();
+
 		int[][] matrix=new int[4][3];
 		int [] production= new int[3];
 		int [] destination= new int[4];
@@ -36,7 +38,8 @@ public class Main {
 		production[1]=10;
 		production[2]=15;
 
-		System.out.println(MC.Calculate(matrix, destination, production));		
+		System.out.println("Minimum Cost "+MC.Calculate(matrix, destination, production));		
+		System.out.println("North West "+NW.Calculate(matrix, destination, production));		
+
 	}
-	
 }
