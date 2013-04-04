@@ -2,10 +2,9 @@ Operational Research
 =================
 
 Transportation methods:
-Norwest corner
-minumum cost
-vogel
-etc.
++ Norwest Corner
++ Minumum Cost
 
-+ hopefully an Android app
+
++ hopefully an Android app :3
 

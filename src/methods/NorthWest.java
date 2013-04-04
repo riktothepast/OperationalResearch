@@ -1,7 +1,7 @@
 package methods;
 
 /*
- * Operational Research Minimum Cost Implementation
+ * Operational Research North West Corner Implementation
  * 2013 Ricardo Illescas
  */
 /*MIT LICENSE
@@ -14,17 +14,18 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
-public class MinimumCost {
+public class NorthWest {
 	private int [][] matrix_data;
 	private int [][] asignments;
 	private int [] destinations;
 	private int [] production;
 	private String result="";
 	private Vector2 asignPos;
-	private int minvalue,total;
+	private int total;
 	boolean asign=false;
-	public MinimumCost(){}
+	public NorthWest(){}
 	
+
 	public String Calculate(int values[][],int dest[],int prod[]){
 		this.matrix_data=values;
 		asignments=new int[values.length][values[0].length];
@@ -33,27 +34,24 @@ public class MinimumCost {
 		PerformCalculus();
 		return ArrageString();
 	}
+	
 	/*
 	 * Checks the minimum value of the matrix and keeps it's position; 
 	 * adds the quantity of the production to the desired destination, when production reaches zero returns a computation of the minimum cost.
 	 */
 	private void PerformCalculus(){
-		minvalue=9999999;
 		while(ProductAvailable()){
 			for (int x = 0; x < matrix_data.length; x++) {
 				for (int y = 0; y < matrix_data[0].length; y++) {
-					if(matrix_data[x][y]<=minvalue){
 						//is possible to asign this space?
 						if(!hasAsigned(x,y)&&production[y]>0&&destinations[x]>0){
 							if(production[y]>0){
-								minvalue=matrix_data[x][y];
 								asignPos=new Vector2(x,y);
 								asign=true;
 							}
 						}else{
-							minvalue=9999999;
 						}
-					}
+					
 				}
 			}
 			if(asign){
@@ -107,4 +105,3 @@ public class MinimumCost {
 	}
 	
 }
-

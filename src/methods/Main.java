@@ -6,7 +6,7 @@ public class Main {
 	
 	public static void main(String args[]){
 			
-		MinimumCost MC=new MinimumCost();
+		NorthWest MC=new NorthWest();
 		int[][] matrix=new int[4][3];
 		int [] production= new int[3];
 		int [] destination= new int[4];
