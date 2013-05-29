@@ -558,17 +558,18 @@ public class SuperModi {
 
 	   public String display() {
 	    	cadenacostos = "";
+	    	int littlecontador = 0;
 	        tc = 0;
 	        for (i = 1; i <= r; i++) {
 	            for (j = 1; j <= c; j++) {
-	            	if(tc!=0){
+	            	if(littlecontador!=0){
 		            	cadenacostos += " + "+a[i][j]+"("+x[i][j]+")";
 		                tc = tc + (a[i][j] * x[i][j]);
 	            	}else{
 		            	cadenacostos += a[i][j]+"("+x[i][j]+")";
 		                tc = tc + (a[i][j] * x[i][j]);	            		
 	            	}
-
+	            	littlecontador++;
 	            }
 	        }
 	        cadenacostos += " = "+tc+" \n";
