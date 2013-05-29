@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">InvestigacionDeOperaciones</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_resolucion">Resolucion</string>
+    <string name="title_activity_optimizacion">Optimizacion</string>
+    <string name="title_activity_resolution_methods">ResolutionMethods</string>
+    <string name="title_activity_optimization_methods">OptimizationMethods</string>
+    <string name="resultado">Resultado</string>
+
+</resources>

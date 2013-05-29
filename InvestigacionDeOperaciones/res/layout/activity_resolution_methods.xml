@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ResolutionMethods" >
+
+    <Button
+        android:id="@+id/Resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Produccion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:text="@string/resultado" />
+
+    <EditText
+        android:id="@+id/Destinos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Matriz"
+        android:layout_alignRight="@+id/Matriz"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:inputType="number|phone" />
+
+    <TextView
+        android:id="@+id/destinos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Destinos"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_marginBottom="18dp"
+        android:text="Destinos" />
+
+    <EditText
+        android:id="@+id/Matriz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/destinos"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/Columnas"
+        android:layout_marginBottom="22dp"
+        android:ems="10"
+        android:inputType="number|phone" />
+
+    <TextView
+        android:id="@+id/ResTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Columnas"
+        android:layout_alignBottom="@+id/Columnas"
+        android:layout_alignParentLeft="true"
+        android:text="Columnas" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Matriz"
+        android:layout_centerHorizontal="true"
+        android:text="Matriz " />
+
+    <EditText
+        android:id="@+id/Columnas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView3"
+        android:layout_alignLeft="@+id/Filas"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/Filas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/resText"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Filas"
+        android:layout_alignLeft="@+id/ResTxt"
+        android:text="Filas" />
+
+    <TextView
+        android:id="@+id/resText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignParentTop="true"
+        android:text="hello world" />
+
+    <EditText
+        android:id="@+id/Produccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Destinos"
+        android:layout_alignRight="@+id/Destinos"
+        android:layout_below="@+id/textView5"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:inputType="phone" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Destinos"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Produccion" />
+
+</RelativeLayout>
