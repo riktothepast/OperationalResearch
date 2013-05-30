@@ -234,9 +234,9 @@ public class Asignacion {
     	int[][] matrix=new int[n][n];
         String[] filas = data.split(",");
         for (int i = 0; i < n; i++) {
-            String[] casillas = filas[i - 1].split(" ");
+            String[] casillas = filas[i].split(" ");
             for (int j = 0; j < n; j++) {
-                matrix[i][j] = Integer.parseInt(casillas[j - 1]);
+                matrix[i][j] = Integer.parseInt(casillas[j]);
             }
         }
         numCol = matrix[0].length;
@@ -245,7 +245,7 @@ public class Asignacion {
             throw new IllegalArgumentException("Expecting more rows than columns");
         }
         this.costos = matrix;
-        byte[][] sol = new Asignacion().resolver();
+        byte[][] sol = resolver();
         int coste = 0;
         String salida = "";
         for (int i = 0; i < matrix.length; i++) {
